@@ -32,7 +32,6 @@ body{
 }
 
 #cabecera nav ul{
-	/*list-style-type: none;*/
 	display: flex;
 	justify-content: space-around;
 	padding: 0em;
@@ -50,12 +49,17 @@ body{
 
 #cabecera nav ul li .menu{
 	color: white;
-	text-decoration: none;
 	display: block;
     text-align: center;
     width: 100%;
 	padding: 1.9375em 0em;
 	position: absolute;
+}
+
+#pagina_index{
+	background-color: #3399cc;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 #cabecera nav ul li .menu:hover{
@@ -83,15 +87,20 @@ body{
 #contenido #secundario{
 	background-color:  #d5c75f;
 	display: flex;
-	justify-content: center;	
+	/*justify-content: center;*/	
 }
 
-#contenido #secundario > figure{
-	/*width: 50%;*/
+#contenido #secundario a{
+	display: block;
 }
 
 #contenido .imagen{
+	box-shadow: 2px 2px #02010a;
 	width: 100%;
+}
+
+#contenido #secundario .imagen{
+	border:2px solid black;
 }
 
 
@@ -106,6 +115,29 @@ body{
 
 #contenido_footer > div{
 	width: 25%;
+}
+
+#redes{
+	display: flex;
+	padding-right: 0.4em;
+}
+
+#redes figure{
+	margin: 0em;
+	width: 100%;
+
+}
+
+#redes a{
+	display: block;
+	padding: 0.2em 0.4em 0.2em 0.4em;
+	/*width: 33.33%;*/
+}
+
+
+
+#redes .img_redes{
+	width: 100%;
 }
 
 /*----- MEDIA QUERIES -----*/
@@ -142,13 +174,7 @@ body{
 	}
 
 	#contenido #secundario{
-		/*display: flex;*/
 		flex-direction: column;
-		/*align-items: center;*/
-	}
-
-	#contenido .imagen{
-		width: 100%;
 	}
 
 	#contenido_footer{
@@ -161,4 +187,30 @@ body{
 		width: 100%;
 	}
 
+}
+
+/*----- EFECTOS -----*/
+
+#imagen_2:hover{
+	transform: rotate(10deg);
+	-webkit-transition: transform 1s;
+	transition: transform 1s;
+	box-shadow: 2px 2px #82c3a6;
+}
+
+#imagen_2{
+	-webkit-transition: transform 2s;
+	transition: transform 2s;
+}
+
+#imagen_3:hover{
+	transform: translate(20px, -5px);
+	-webkit-transition: transform 1s;
+	transition: transform 1s;
+	box-shadow: 2px 2px #82c3a6;
+}
+
+#imagen_3{
+	-webkit-transition: transform 2s;
+	transition: transform 2s;
 }
