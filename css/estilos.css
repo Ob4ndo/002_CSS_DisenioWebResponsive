@@ -56,15 +56,42 @@ body{
 	position: absolute;
 }
 
+/*----- seleccion de pagina -----*/
+
 #pagina_index{
+	background-color: #3399cc;
+	font-weight: bold;	
+}
+
+#pagina_index .menu{
+	text-decoration: none;
+}
+
+#pagina_paisajes{
 	background-color: #3399cc;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-#cabecera nav ul li .menu:hover{
+#pagina_paisajes .menu{
+	text-decoration: none;
+}
+
+#pagina_retratos{
 	background-color: #3399cc;
-	font-weight: bold;	
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#pagina_retratos .menu{
+	text-decoration: none;
+}
+
+/*------ Navegacion por el menu -----*/
+
+#cabecera nav ul li .menu:hover{
+	background-color: hsla(200,60%,50%,0.65);
+	font-weight: bold;
 }
 
 /*-----FORMATO A SECTION-----*/
@@ -134,10 +161,8 @@ body{
 	/*width: 33.33%;*/
 }
 
-
-
 #redes .img_redes{
-	width: 100%;
+	width: 70%;
 }
 
 /*----- MEDIA QUERIES -----*/
