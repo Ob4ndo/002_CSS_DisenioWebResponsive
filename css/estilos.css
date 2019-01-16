@@ -17,6 +17,8 @@ body{
 	border-radius: 10px 10px 0px 0px;
 	display: flex;
 	padding-left: 3em;
+	/*animacion*/
+	animation: slidein 2s;
 }
 
 #cabecera h1{
@@ -165,9 +167,80 @@ body{
 	width: 70%;
 }
 
+/*----- PAISAJES.HTML -----*/
+
+#principal_figuras{
+	background-color: #d5c75f;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.figura{
+	margin: 1em 0em;
+	padding: 1em;
+	width: 29.77%;
+}
+
+#principal_figuras .figura .imagen{
+	width: 100%;
+}
+
+/*----- EFECTOS -----*/
+
+#imagen_2:hover{
+	transform: rotate(10deg);
+	-webkit-transition: transform 1s;
+	transition: transform 1s;
+	box-shadow: 2px 2px #82c3a6;
+}
+
+#imagen_2{
+	-webkit-transition: transform 2s;
+	transition: transform 2s;
+}
+
+#imagen_3:hover{
+	transform: translate(20px, -5px);
+	-webkit-transition: transform 1s;
+	transition: transform 1s;
+	box-shadow: 2px 2px #82c3a6;
+}
+
+#imagen_3{
+	-webkit-transition: transform 2s;
+	transition: transform 2s;
+}
+
+#principal_figuras .figura:first-child .imagen{
+	-webkit-filter:blur(10px);
+}
+
+#principal_figuras .figura:nth-child(even) .imagen{
+	-webkit-filter:grayscale(100%);
+}
+
+#principal_figuras .figura:nth-child(3) .imagen{
+	-webkit-filter:sepia(90%);
+}
+
+/*----- ANIMACION -----*/
+@-webkit-keyframes slidein{
+	0%{
+		margin-top: 150%;
+	}
+	60%{
+		margin-top: -5%;
+	}
+	100%{
+		margin-top: 0%;
+	}
+}
+
+
 /*----- MEDIA QUERIES -----*/
 
-@media (max-width: 900px){
+@media (max-width: 899px){
 	#contenido_general{
 		width: 100%;
 	}
@@ -212,30 +285,14 @@ body{
 		width: 100%;
 	}
 
+	#principal_figuras{
+		flex-direction: column;	
+	}
+
+	.figura{		
+		width: 100%;
+		padding-left: 0em;
+		padding-right: 0em;
+	}
 }
 
-/*----- EFECTOS -----*/
-
-#imagen_2:hover{
-	transform: rotate(10deg);
-	-webkit-transition: transform 1s;
-	transition: transform 1s;
-	box-shadow: 2px 2px #82c3a6;
-}
-
-#imagen_2{
-	-webkit-transition: transform 2s;
-	transition: transform 2s;
-}
-
-#imagen_3:hover{
-	transform: translate(20px, -5px);
-	-webkit-transition: transform 1s;
-	transition: transform 1s;
-	box-shadow: 2px 2px #82c3a6;
-}
-
-#imagen_3{
-	-webkit-transition: transform 2s;
-	transition: transform 2s;
-}
